@@ -9,8 +9,10 @@ const ResultsPage = () => {
     useEffect(() => {
         const fetchResults = async () => {
             try {
-                const response = await axios.get("http://127.0.0.1:8000/api/results/");
-                setData(response.data);
+                const response = await axios.get(
+                    "http://127.0.0.1:8000/api/get_results/"
+                );
+                setData(response.data.data);
                 setIsLoading(false);
             } catch (error) {
                 console.error("Error fetching results:", error);
@@ -48,7 +50,7 @@ const ResultsPage = () => {
                                 <td>{candidate.name}</td>
                                 <td>{candidate.email}</td>
                                 <td>{candidate.phone}</td>
-                                <td>{candidate.skills.join(", ")}</td>
+                                <td>{candidate?.skills}</td>
                                 <td>{candidate.rank}</td>
                             </tr>
                         ))

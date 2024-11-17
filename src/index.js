@@ -1,12 +1,13 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import App from "./App";
-import { BrowserRouter as Router } from "react-router-dom";
+import { Container } from "react-bootstrap";
+// import { BrowserRouter as Router } from "react-router-dom";
 
-ReactDOM.render(
-    <Router>
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+    <Container>
         <App />
-    </Router>,
-    document.getElementById("root")
+    </Container>
 );
