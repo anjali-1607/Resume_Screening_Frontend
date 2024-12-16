@@ -1,0 +1,80 @@
+#recruiter-section {
+    background-color: #f4f6f9; /* Light background */
+    padding: 3rem 3rem; /* Added padding to the container */
+}
+
+.recruiter-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #28a745; /* Green color */
+    /* margin-bottom: 1rem;  */
+}
+
+.recruiter-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.recruiter-label {
+    font-weight: bold;
+    color: #333;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.recruiter-input {
+    border-radius: 0.375rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    width: 100%;
+}
+
+.recruiter-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 0.375rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1.5rem;
+    width: 100%; /* Full width for better responsiveness */
+}
+
+.recruiter-btn:hover {
+    background-color: #218838;
+}
+
+.recruiter-photo-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #28a745;
+    padding: 5px; /* Added padding to the image */
+}
+
+@media (max-width: 768px) {
+    .recruiter-title {
+        font-size: 2rem;
+    }
+
+    .recruiter-description {
+        font-size: 1rem;
+    }
+
+    .recruiter-btn {
+        width: 100%; /* Ensures button is full width on smaller screens */
+    }
+}
+.recruiter-photo-img-square {
+    width: 100%; /* Make the image take up full width */
+    max-width: 400px; /* Set a max width to keep it large but not too wide */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image fills the space without distorting */
+    border-radius: 0; /* Remove any border radius for a square format */
+}

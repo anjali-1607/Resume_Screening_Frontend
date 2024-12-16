@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Container, Table, Spinner, Form, Button } from "react-bootstrap";
+import Header from "./Header";
 
 const ResultsPage = () => {
     const [data, setData] = useState([]);
@@ -22,8 +23,10 @@ const ResultsPage = () => {
     };
 
     return (
-        <Container>
-            <div className="my-4">
+        // <Container>
+        <>
+            <Header />
+            <div className="my-4 mx-4">
                 <h2>Candidate Results</h2>
                 <Form className="mb-4">
                     <Form.Group controlId="jobDescription">
@@ -39,6 +42,12 @@ const ResultsPage = () => {
                     <Button
                         variant="primary"
                         className="mt-3"
+                        style={{
+                            backgroundColor: "#28a745", // Fresh green
+                            border: "none",
+                            fontSize: "1rem",
+                            padding: "0.5rem 1rem",
+                        }}
                         onClick={fetchResults}
                         disabled={!jobDescription.trim()}>
                         Get Results
@@ -78,7 +87,8 @@ const ResultsPage = () => {
                     </tbody>
                 </Table>
             )}
-        </Container>
+        </>
+        // </Container>
     );
 };
 

@@ -40,7 +40,7 @@ const UploadPage = () => {
     };
 
     return (
-        <div className="container">
+        <div>
             <h2>Upload Resume</h2>
             <input type="file" onChange={onFileChange} />
             <button onClick={onFileUpload}>Upload</button>
